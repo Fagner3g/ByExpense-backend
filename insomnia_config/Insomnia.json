@@ -1,1 +1,168 @@
-{"_type":"export","__export_format":4,"__export_date":"2020-03-04T20:51:35.748Z","__export_source":"insomnia.desktop.app:v7.1.1","resources":[{"_id":"req_8055ad5ae2a848ebbe8f5e12ccef85db","authentication":{},"body":{},"created":1577386576993,"description":"","headers":[],"isPrivate":false,"metaSortKey":-1577386576993,"method":"PUT","modified":1577386623422,"name":"My Request","parameters":[],"parentId":"wrk_fe57bf8c511c41efa4684b84e1901758","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"http://localhost:9000/sap/opu/odata/SSCN/ODATA_TAXONOMY_SRV/TaxonomyHierarchySet(TaxonomyCode='Z',ItemHash='EA1B5EC64823E4F18007000C292FA113',ItemParent='',Language='PT',CodItem='Test')","_type":"request"},{"_id":"wrk_fe57bf8c511c41efa4684b84e1901758","created":1577386525005,"description":"","modified":1583272459263,"name":"Fagner","parentId":null,"_type":"workspace"},{"_id":"req_732c323624df4ba096202b9aed637467","authentication":{},"body":{"mimeType":"application/json","text":"{\n\t\"name\": \"Fagner Gomes\",\n\t\"email\": \"Fagner.gomes@gmail.com.br\",\n\t\"password_hash\":\"234234\"\n}"},"created":1583272611763,"description":"","headers":[{"id":"pair_f0131aed28274668aae03078b311c364","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1583272611763,"method":"POST","modified":1583354633724,"name":"Create","parameters":[],"parentId":"fld_893e756560f64c74ab38a5ab5d29b022","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ base_url  }}/users","_type":"request"},{"_id":"fld_893e756560f64c74ab38a5ab5d29b022","created":1583272540856,"description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1583272540856,"modified":1583272540856,"name":"Users","parentId":"wrk_1bca1a6899024de8945c91ae40764c8e","_type":"request_group"},{"_id":"wrk_1bca1a6899024de8945c91ae40764c8e","created":1583272525304,"description":"","modified":1583272525304,"name":"ByExpense","parentId":null,"_type":"workspace"},{"_id":"req_41b19ca4d28e469c91b30f8275ab4986","authentication":{},"body":{"mimeType":"application/json","text":"{\n\t\"name\": \"Fagner Gomes\",\n\t\"email\": \"Fagner.gomes@gmail.com.br\",\n\t\"password_hash\":\"234234\"\n}"},"created":1583354977299,"description":"","headers":[{"id":"pair_f0131aed28274668aae03078b311c364","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1580329594378,"method":"PUT","modified":1583354983182,"name":"Update","parameters":[],"parentId":"fld_893e756560f64c74ab38a5ab5d29b022","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ base_url  }}/users","_type":"request"},{"_id":"env_a3ede9fdb26916a7e6d60bb6c7dd6314401866be","color":null,"created":1577386525053,"data":{},"dataPropertyOrder":null,"isPrivate":false,"metaSortKey":1577386525053,"modified":1577386525053,"name":"Base Environment","parentId":"wrk_fe57bf8c511c41efa4684b84e1901758","_type":"environment"},{"_id":"jar_a3ede9fdb26916a7e6d60bb6c7dd6314401866be","cookies":[{"creation":"2019-12-26T18:56:51.360Z","domain":"localhost","hostOnly":true,"id":"8731450363511888","key":"sap-usercontext","lastAccessed":"2019-12-26T18:56:51.360Z","path":"/","value":"sap-client=100&sap-language=PT"}],"created":1577386525057,"modified":1577386611362,"name":"Default Jar","parentId":"wrk_fe57bf8c511c41efa4684b84e1901758","_type":"cookie_jar"},{"_id":"env_faf063b4320c8dbd008163a8f9ef4c8e2d8617ef","color":null,"created":1583272525335,"data":{"base_url":"http://localhost:3333"},"dataPropertyOrder":{"&":["base_url"]},"isPrivate":false,"metaSortKey":1583272525335,"modified":1583272578995,"name":"Base Environment","parentId":"wrk_1bca1a6899024de8945c91ae40764c8e","_type":"environment"},{"_id":"jar_faf063b4320c8dbd008163a8f9ef4c8e2d8617ef","cookies":[],"created":1583272525348,"modified":1583272525348,"name":"Default Jar","parentId":"wrk_1bca1a6899024de8945c91ae40764c8e","_type":"cookie_jar"}]}
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-03-04T21:32:37.766Z",
+  "__export_source": "insomnia.desktop.app:v7.1.1",
+  "resources": [
+    {
+      "_id": "req_6ae9db4c4c454d26a995b6263d226f8b",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"Fagner.gomes@gmail.com.br\",\n\t\"password\": \"1234567\"\n}"
+      },
+      "created": 1583355776536,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_447ba4d8ca11461c96a87321f6829eea",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1583355776536,
+      "method": "POST",
+      "modified": 1583357527633,
+      "name": "Create",
+      "parameters": [],
+      "parentId": "fld_f36b4f22248643769625e7640c8e8d91",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/sessions",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_f36b4f22248643769625e7640c8e8d91",
+      "created": 1583355755200,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1583355755200,
+      "modified": 1583355755200,
+      "name": "Sessions",
+      "parentId": "wrk_1bca1a6899024de8945c91ae40764c8e",
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_1bca1a6899024de8945c91ae40764c8e",
+      "created": 1583272525304,
+      "description": "",
+      "modified": 1583272525304,
+      "name": "ByExpense",
+      "parentId": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_732c323624df4ba096202b9aed637467",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Fagner Gomes\",\n\t\"email\": \"Fagner.gomes@gmail.com.br\",\n\t\"password\": \"123456\"\n}"
+      },
+      "created": 1583272611763,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_f0131aed28274668aae03078b311c364",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1583272611763,
+      "method": "POST",
+      "modified": 1583356673770,
+      "name": "Create",
+      "parameters": [],
+      "parentId": "fld_893e756560f64c74ab38a5ab5d29b022",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_893e756560f64c74ab38a5ab5d29b022",
+      "created": 1583272540856,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1583272540856,
+      "modified": 1583272540856,
+      "name": "Users",
+      "parentId": "wrk_1bca1a6899024de8945c91ae40764c8e",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_41b19ca4d28e469c91b30f8275ab4986",
+      "authentication": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTgzMzU2NzY5LCJleHAiOjE1ODM5NjE1Njl9.t2jBWat5ywHotTlvvwAzVKM2Nh1g6ZnsNSjzoxOrXDQ",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Fagner Gomes\",\n\t\"email\": \"Fagner.gomes@gmail.com.br\",\n\t\"oldPassword\": \"1234567\",\n\t\"password\": \"12345678\",\n\t\"confirmPassword\": \"12345678\"\n}"
+      },
+      "created": 1583354977299,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_f0131aed28274668aae03078b311c364",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1580329594378,
+      "method": "PUT",
+      "modified": 1583357300543,
+      "name": "Update",
+      "parameters": [],
+      "parentId": "fld_893e756560f64c74ab38a5ab5d29b022",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "env_faf063b4320c8dbd008163a8f9ef4c8e2d8617ef",
+      "color": null,
+      "created": 1583272525335,
+      "data": {
+        "base_url": "http://localhost:3333"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "isPrivate": false,
+      "metaSortKey": 1583272525335,
+      "modified": 1583272578995,
+      "name": "Base Environment",
+      "parentId": "wrk_1bca1a6899024de8945c91ae40764c8e",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_faf063b4320c8dbd008163a8f9ef4c8e2d8617ef",
+      "cookies": [],
+      "created": 1583272525348,
+      "modified": 1583272525348,
+      "name": "Default Jar",
+      "parentId": "wrk_1bca1a6899024de8945c91ae40764c8e",
+      "_type": "cookie_jar"
+    }
+  ]
+}
