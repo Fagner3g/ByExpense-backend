@@ -1,15 +1,77 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2020-03-04T21:32:37.766Z",
+  "__export_date": "2020-03-05T01:41:23.678Z",
   "__export_source": "insomnia.desktop.app:v7.1.1",
   "resources": [
+    {
+      "_id": "req_ec23b233f8fd47f9b16eaf58b1ac85b8",
+      "authentication": { "token": "{{ token  }}", "type": "bearer" },
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "description": "",
+            "fileName": "C:\\Users\\Fagner\\Pictures\\portfolio.jpg",
+            "id": "pair_56ac865d590f4547bac611f7de4dcfa4",
+            "name": "file",
+            "type": "file",
+            "value": ""
+          }
+        ]
+      },
+      "created": 1583370532125,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_e8901ce0dbfe4651afcf004ca9b8d550",
+          "name": "Content-Type",
+          "value": "multipart/form-data"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1583370532125,
+      "method": "POST",
+      "modified": 1583370705994,
+      "name": "Create",
+      "parameters": [],
+      "parentId": "fld_c0a2e1266dbf4efbbf394d276c48feec",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/files",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_c0a2e1266dbf4efbbf394d276c48feec",
+      "created": 1583370516627,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1583370516627,
+      "modified": 1583370516627,
+      "name": "Files",
+      "parentId": "wrk_1bca1a6899024de8945c91ae40764c8e",
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_1bca1a6899024de8945c91ae40764c8e",
+      "created": 1583272525304,
+      "description": "",
+      "modified": 1583272525304,
+      "name": "ByExpense",
+      "parentId": null,
+      "_type": "workspace"
+    },
     {
       "_id": "req_6ae9db4c4c454d26a995b6263d226f8b",
       "authentication": {},
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"email\": \"Fagner.gomes@gmail.com.br\",\n\t\"password\": \"1234567\"\n}"
+        "text": "{\n\t\"email\": \"Fagner.gomes@gmail.com.br\",\n\t\"password\": \"123456\"\n}"
       },
       "created": 1583355776536,
       "description": "",
@@ -23,7 +85,7 @@
       "isPrivate": false,
       "metaSortKey": -1583355776536,
       "method": "POST",
-      "modified": 1583357527633,
+      "modified": 1583370626706,
       "name": "Create",
       "parameters": [],
       "parentId": "fld_f36b4f22248643769625e7640c8e8d91",
@@ -47,15 +109,6 @@
       "name": "Sessions",
       "parentId": "wrk_1bca1a6899024de8945c91ae40764c8e",
       "_type": "request_group"
-    },
-    {
-      "_id": "wrk_1bca1a6899024de8945c91ae40764c8e",
-      "created": 1583272525304,
-      "description": "",
-      "modified": 1583272525304,
-      "name": "ByExpense",
-      "parentId": null,
-      "_type": "workspace"
     },
     {
       "_id": "req_732c323624df4ba096202b9aed637467",
@@ -103,13 +156,10 @@
     },
     {
       "_id": "req_41b19ca4d28e469c91b30f8275ab4986",
-      "authentication": {
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTgzMzU2NzY5LCJleHAiOjE1ODM5NjE1Njl9.t2jBWat5ywHotTlvvwAzVKM2Nh1g6ZnsNSjzoxOrXDQ",
-        "type": "bearer"
-      },
+      "authentication": { "token": "{{ token  }}", "type": "bearer" },
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"name\": \"Fagner Gomes\",\n\t\"email\": \"Fagner.gomes@gmail.com.br\",\n\t\"oldPassword\": \"1234567\",\n\t\"password\": \"12345678\",\n\t\"confirmPassword\": \"12345678\"\n}"
+        "text": "{\n\t\"name\": \"Fagner Gomes\",\n\t\"email\": \"Fagner.gomes@gmail.com.br\",\n\t\"oldPassword\": \"123456\",\n\t\"password\": \"123456\",\n\t\"confirmPassword\": \"123456\",\n\t\"avatar_id\": 2\n}"
       },
       "created": 1583354977299,
       "description": "",
@@ -123,7 +173,7 @@
       "isPrivate": false,
       "metaSortKey": -1580329594378,
       "method": "PUT",
-      "modified": 1583357300543,
+      "modified": 1583372328784,
       "name": "Update",
       "parameters": [],
       "parentId": "fld_893e756560f64c74ab38a5ab5d29b022",
@@ -141,16 +191,13 @@
       "color": null,
       "created": 1583272525335,
       "data": {
-        "base_url": "http://localhost:3333"
+        "base_url": "http://localhost:3333",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTgzMzcwNjI4LCJleHAiOjE1ODM5NzU0Mjh9.GTS7Y5hZFx_e9eMnWkEBphnx_5lyzjk0UNtKIW8NYss"
       },
-      "dataPropertyOrder": {
-        "&": [
-          "base_url"
-        ]
-      },
+      "dataPropertyOrder": { "&": ["base_url", "token"] },
       "isPrivate": false,
       "metaSortKey": 1583272525335,
-      "modified": 1583272578995,
+      "modified": 1583370640908,
       "name": "Base Environment",
       "parentId": "wrk_1bca1a6899024de8945c91ae40764c8e",
       "_type": "environment"
