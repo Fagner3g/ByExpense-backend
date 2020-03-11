@@ -7,8 +7,6 @@ class User extends Model {
       {
         name: Sequelize.STRING,
         email: Sequelize.STRING,
-        group_id: Sequelize.INTEGER,
-        avatar_id: Sequelize.INTEGER,
         password: Sequelize.VIRTUAL,
         password_hash: Sequelize.STRING,
       },
@@ -17,6 +15,7 @@ class User extends Model {
       }
     );
 
+    // Antes de salvar na base é executado este hook.
     this.addHook('beforeSave', async user => {
       if (user.password) {
         user.password_hash = await bcrypt.hash(user.password, 8);
@@ -26,9 +25,9 @@ class User extends Model {
     return this;
   }
 
-  // static associate(models) {
-  //   this.belongsTo(models.Avatar, { foreignKey: 'avatar_id', as: 'avatar' });
-  // }
+  static associate(models) {
+    this.belongsTo(models.Avatar, { foreignKey: 'avatar_id' });
+  }
 
   checkPassword(password) {
     return bcrypt.compare(password, this.password_hash);
