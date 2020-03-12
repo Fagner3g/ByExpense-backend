@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 
 import authConfig from '../../config/auth';
 import User from '../models/User';
-import File from '../models/File';
+import Avatar from '../models/Avatar';
 
 class SessionController {
   async store(req, res) {
@@ -24,7 +24,7 @@ class SessionController {
       where: { email },
       include: [
         {
-          model: File,
+          model: Avatar,
           as: 'avatar',
           attributes: ['name', 'path', 'url'],
         },
