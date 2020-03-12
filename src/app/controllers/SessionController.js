@@ -4,6 +4,7 @@ import jwt from 'jsonwebtoken';
 import authConfig from '../../config/auth';
 import User from '../models/User';
 import Avatar from '../models/Avatar';
+import UserGroups from '../models/UserGroups';
 
 class SessionController {
   async store(req, res) {
@@ -28,6 +29,11 @@ class SessionController {
           as: 'avatar',
           attributes: ['name', 'path', 'url'],
         },
+        {
+          model: UserGroups,
+          as: 'usergroups',
+          attributes: ['id', 'name', 'user_id'],
+        },
       ],
     });
 
@@ -39,7 +45,7 @@ class SessionController {
       return res.status(401).json({ error: 'Password does not match' });
     }
 
-    const { id, name, avatar_id, avatar } = user;
+    const { id, name, avatar_id, avatar, usergroups } = user;
 
     return res.json({
       user: {
@@ -48,6 +54,7 @@ class SessionController {
         email,
         avatar_id,
         avatar,
+        usergroups,
       },
       token: jwt.sign({ id }, authConfig.secret, {
         expiresIn: authConfig.expiresIn,

@@ -27,6 +27,7 @@ class User extends Model {
 
   static associate(models) {
     this.belongsTo(models.Avatar, { foreignKey: 'avatar_id', as: 'avatar' });
+    this.hasMany(models.UserGroups, { as: 'usergroups' });
   }
 
   checkPassword(password) {
