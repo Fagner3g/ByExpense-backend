@@ -16,9 +16,21 @@ module.exports = {
         allowNull: false,
         unique: true,
       },
+      active: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: true,
+      },
       password_hash: {
         type: Sequelize.STRING,
         allowNull: false,
+      },
+      avatar_id: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        references: { model: 'avatars', key: 'id' }, // User belongsTo Avatar 1:1
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
       },
       created_at: {
         type: Sequelize.DATE,

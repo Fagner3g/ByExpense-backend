@@ -1,12 +1,17 @@
 import Avatar from '../models/Avatar';
+import User from '../models/User';
 
 class AvatarController {
   async store(req, res) {
     const { originalname: name, filename: path } = req.file;
 
-    const avatar = await Avatar.create({ name, path });
+    const user = await User.findByPk(req.userId);
 
-    return res.json(avatar);
+    await Avatar.create({ name, path }).then(a => {
+      user.update({ avatar_id: a.dataValues.id });
+    });
+
+    return res.status(200).json({ message: 'Success' });
   }
 }
 
