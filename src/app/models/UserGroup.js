@@ -1,12 +1,11 @@
 import Sequelize, { Model } from 'sequelize';
 
-class UserGroups extends Model {
+class UserGroup extends Model {
   static init(sequelize) {
     super.init(
       {
-        name: Sequelize.STRING,
-        code: Sequelize.STRING,
         user_id: Sequelize.INTEGER,
+        group_id: Sequelize.INTEGER,
       },
       {
         sequelize,
@@ -17,4 +16,4 @@ class UserGroups extends Model {
   }
 }
 
-export default UserGroups;
+export default UserGroup;

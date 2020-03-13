@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 import authConfig from '../../config/auth';
 import User from '../models/User';
 import Avatar from '../models/Avatar';
-import UserGroups from '../models/UserGroups';
+import Group from '../models/Group';
 
 class SessionController {
   async store(req, res) {
@@ -30,8 +30,8 @@ class SessionController {
           attributes: ['name', 'path', 'url'],
         },
         {
-          model: UserGroups,
-          as: 'usergroups',
+          model: Group,
+          as: 'groups',
           attributes: ['id', 'name', 'user_id'],
         },
       ],
