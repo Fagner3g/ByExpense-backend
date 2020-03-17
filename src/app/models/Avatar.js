@@ -22,7 +22,7 @@ class Avatar extends Model {
   }
 
   static associate(models) {
-    this.hasMany(models.User, { as: 'users' });
+    this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
   }
 }
 
