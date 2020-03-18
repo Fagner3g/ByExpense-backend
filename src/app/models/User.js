@@ -28,6 +28,11 @@ class User extends Model {
 
   static associate(models) {
     this.hasOne(models.Avatar, { foreignKey: 'user_id', as: 'avatar' });
+    this.belongsToMany(models.Group, {
+      foreignKey: 'user_id',
+      through: 'user_groups',
+      as: 'groups',
+    });
   }
 
   checkPassword(password) {

@@ -3,11 +3,10 @@ import Sequelize from 'sequelize';
 import User from '../app/models/User';
 import Avatar from '../app/models/Avatar';
 import Group from '../app/models/Group';
-import UserGroup from '../app/models/UserGroup';
 
 import databaseConfig from '../config/database';
 
-const models = [User, Avatar, Group, UserGroup];
+const models = [User, Avatar, Group];
 
 class Database {
   constructor() {
