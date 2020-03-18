@@ -23,6 +23,9 @@ routes.put('/users', UserController.update);
 routes.post('/avatar', upload.single('file'), AvatarController.store);
 
 routes.get('/groups', GroupController.index);
+routes.get('/groups/:code', GroupController.show);
 routes.post('/groups', GroupController.store);
+routes.post('/groups/:code', GroupController.store);
+routes.delete('/groups/:code', GroupController.delete);
 
 export default routes;
