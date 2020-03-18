@@ -3,6 +3,20 @@ import Group from '../models/Group';
 import User from '../models/User';
 
 class GroupController {
+  async index(req, res) {
+    const user_id = req.userId;
+
+    const user = await User.findByPk(user_id, {
+      include: {
+        association: 'groups',
+        attributes: ['id', 'name', 'code'],
+        through: { attributes: [] },
+      },
+    });
+
+    return res.json(user.groups);
+  }
+
   async store(req, res) {
     const user_id = req.userId;
     const { name } = req.body;
