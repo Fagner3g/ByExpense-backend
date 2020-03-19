@@ -7,6 +7,6 @@ module.exports = {
   define: {
     timestemps: true, // define que vou ter uma coluna created_at
     underscored: true,
-    underscoredAll: true, // Garante que quero usar padão underscore nas tabelas e colunas.
+    // underscoredAll: true /* removed on v5 */
   },
 };
