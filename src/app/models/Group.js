@@ -16,6 +16,7 @@ class Group extends Model {
   }
 
   static associate(models) {
+    this.hasMany(models.Account, { foreignKey: 'group_id', as: 'accounts' });
     this.belongsToMany(models.User, {
       foreignKey: 'group_id',
       through: 'user_groups',
