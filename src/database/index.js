@@ -4,10 +4,12 @@ import User from '../app/models/User';
 import Avatar from '../app/models/Avatar';
 import Group from '../app/models/Group';
 import Account from '../app/models/Account';
+import Category from '../app/models/Category';
+import SubCategory from '../app/models/SubCategory';
 
 import databaseConfig from '../config/database';
 
-const models = [User, Avatar, Group, Account];
+const models = [User, Avatar, Group, Account, Category, SubCategory];
 
 class Database {
   constructor() {
