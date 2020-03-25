@@ -5,16 +5,16 @@ import Group from '../models/Group';
 class AccountController {
   async index(req, res) {
     const schema = Yup.object().shape({
-      id: Yup.number().required(),
+      groupId: Yup.number().required(),
     });
 
     if (!(await schema.isValid(req.params))) {
       return res.status(400).json({ error: 'Validation fails' });
     }
 
-    const { id } = req.params;
+    const { groupId } = req.params;
 
-    const accounts = await Group.findByPk(id, {
+    const accounts = await Group.findByPk(groupId, {
       include: { model: Account, as: 'accounts', attributes: ['id', 'name'] },
       attributes: ['id', 'name'],
     });
@@ -38,17 +38,11 @@ class AccountController {
 
     const { name, groupId } = req.body;
 
-    const groupExist = await Group.findByPk(groupId);
-
-    if (!groupExist) {
-      return res.status(400).json({ error: 'Group does not exist' });
-    }
-
-    const accountExist = await Account.findOne({
+    const account = await Account.findOne({
       where: { name, group_id: groupId },
     });
 
-    if (accountExist) {
+    if (account) {
       return res.status(400).json({ error: 'Account already exists' });
     }
 

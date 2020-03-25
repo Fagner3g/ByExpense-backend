@@ -10,6 +10,7 @@ import GroupController from './app/controllers/GroupController';
 import AccoutController from './app/controllers/AccoutController';
 import SubCategoryController from './app/controllers/SubCategoryController';
 import CategoryController from './app/controllers/CategoryController';
+import RecordController from './app/controllers/RecordController';
 
 import authMiddlewares from './app/middlewares/auth';
 
@@ -31,7 +32,7 @@ routes.post('/groups', GroupController.store);
 routes.post('/groups/:code', GroupController.store);
 routes.delete('/groups/:code', GroupController.delete);
 
-routes.get('/accounts/:id', AccoutController.index);
+routes.get('/accounts/:groupId', AccoutController.index);
 routes.post('/accounts', AccoutController.store);
 
 routes.get('/subcategories/:id', SubCategoryController.index);
@@ -41,5 +42,9 @@ routes.delete('/subcategories/:id', SubCategoryController.delete);
 routes.get('/categories/:id', CategoryController.index);
 routes.post('/categories', CategoryController.store);
 routes.delete('/categories/:id', CategoryController.delete);
+
+routes.get('/records/:groupId', RecordController.index);
+routes.post('/records', RecordController.store);
+routes.delete('/records/:id', RecordController.delete);
 
 export default routes;

@@ -16,6 +16,7 @@ class Account extends Model {
 
   static associate(models) {
     this.belongsTo(models.Group, { foreignKey: 'id', as: 'groups' });
+    this.hasMany(models.Record, { foreignKey: 'account_id', as: 'records' });
   }
 }
 

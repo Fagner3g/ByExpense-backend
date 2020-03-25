@@ -6,10 +6,11 @@ import Group from '../app/models/Group';
 import Account from '../app/models/Account';
 import Category from '../app/models/Category';
 import SubCategory from '../app/models/SubCategory';
+import Record from '../app/models/Record';
 
 import databaseConfig from '../config/database';
 
-const models = [User, Avatar, Group, Account, Category, SubCategory];
+const models = [User, Avatar, Group, Account, Category, SubCategory, Record];
 
 class Database {
   constructor() {

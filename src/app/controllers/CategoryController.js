@@ -80,7 +80,7 @@ class AccountController {
 
     await Category.destroy({ where: { id } });
 
-    return res.json();
+    return res.status(204).send();
   }
 }
 

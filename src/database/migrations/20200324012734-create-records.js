@@ -9,7 +9,6 @@ module.exports = {
       },
       type: {
         type: Sequelize.ENUM('expense', 'revenue'),
-        allowNull: false,
       },
       name: {
         type: Sequelize.STRING,
