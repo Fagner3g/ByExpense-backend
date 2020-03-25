@@ -11,13 +11,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      group_id: {
-        type: Sequelize.INTEGER,
-        references: { model: 'groups', key: 'id' },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
-        allowNull: false,
-      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
